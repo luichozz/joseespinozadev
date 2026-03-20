@@ -1,0 +1,52 @@
+name: Version Bump
+
+# Triggered by adding the label "bump-version" to a PR.
+# Detects which packages changed vs main, bumps their patch version (x.y.z → x.y.z+1),
+# and commits the change back to the PR branch.
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  bump:
+    name: Bump affected package versions
+    runs-on: ubuntu-latest
+    if: github.event.label.name == 'bump-version'
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # Check out the PR branch so we can commit back to it
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch main branch for comparison
+        run: git fetch origin main
+
+      - name: Detect changed packages and bump versions
+        run: node scripts/bump-versions.js
+        env:
+          BASE_BRANCH: origin/main
+
+      - name: Commit and push bumped versions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add packages/*/package.json
+          if git diff --staged --quiet; then
+            echo "No package versions changed (no packages were affected)."
+          else
+            git commit -m "chore: bump package versions [skip ci]"
+            git push
+          fi

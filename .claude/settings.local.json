@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo $SHELL)",
+      "Bash(node -e \"const fs = require\\(''fs''\\); fs.mkdirSync\\(''packages'', {recursive:true}\\); console.log\\(''done''\\)\")",
+      "Bash(node -e \":*)",
+      "Bash(npm install:*)",
+      "Bash(node ../../node_modules/.bin/vite --version)",
+      "Bash(npx vite:*)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(npx tsc:*)",
+      "Bash(node -e \"const fs = require\\(''fs''\\); console.log\\(fs.readdirSync\\(''packages''\\).join\\('', ''\\)\\); console.log\\(fs.existsSync\\(''packages/view''\\)\\); console.log\\(fs.readdirSync\\(''packages/view''\\).join\\('', ''\\)\\);\")",
+      "Bash(node -e \"console.log\\(process.cwd\\(\\)\\)\")",
+      "Bash(node -e \"require\\(''fs''\\).unlinkSync\\(''packages/lib/src/data/projects.ts''\\); console.log\\(''deleted''\\)\")"
+    ]
+  }
+}

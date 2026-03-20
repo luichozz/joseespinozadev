@@ -1,0 +1,27 @@
+.iconBar {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.icon {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    color: var(--accent);
+    pointer-events: auto;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    color: var(--primary);
+}

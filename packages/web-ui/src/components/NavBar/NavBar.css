@@ -1,0 +1,51 @@
+.navBar {
+    background-color: rgba(131, 125, 104, 0.30);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 95%;
+    max-width: 1200px;
+    height: 70px;
+    margin: 15px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    border-radius: 50px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+    display: flex;
+    gap: 8px;
+}
+
+.navBar .MuiButton-root {
+    border-radius: 20px;
+    padding: 8px 24px;
+    font-weight: 600;
+    text-transform: none;
+    transition: all 0.3s ease;
+    color: var(--background);
+}
+
+.navBar .MuiButton-root:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.pixel-animal {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pixel-animal.left {
+    left: 20px;
+}

@@ -1,6 +1,5 @@
-import type { ReactNode } from 'react';
-import { aboutData } from '../data/about';
-import { experienceData } from '../data/experience';
+import { useState, useEffect, type ReactNode } from 'react';
+import { fetchAbout, fetchExperiences } from '../sanity/queries';
 import type { AboutData, Experience } from '../types';
 
 export interface LoaderData {
@@ -13,10 +12,17 @@ interface LoaderWrapperProps {
 }
 
 function LoaderWrapper({ children }: LoaderWrapperProps) {
-  const data: LoaderData = {
-    about: aboutData,
-    experiences: experienceData,
-  };
+  const [data, setData] = useState<LoaderData | null>(null);
+
+  useEffect(() => {
+    Promise.all([fetchAbout(), fetchExperiences()])
+      .then(([about, experiences]) => {
+        if (about) setData({ about, experiences });
+      })
+      .catch((err) => console.error('[LoaderWrapper] Sanity fetch failed:', err));
+  }, []);
+
+  if (!data) return null;
 
   return <>{children(data)}</>;
 }

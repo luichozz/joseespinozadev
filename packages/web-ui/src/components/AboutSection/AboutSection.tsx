@@ -1,6 +1,7 @@
 import type { AboutData } from '@portfolio/lib';
 import CloudImage from '../CloudImage/CloudImage';
 import { useIsSV } from '../../hooks/useIsSV';
+import { useInView } from '../../hooks/useInView';
 
 interface AboutSectionProps {
   about: AboutData;
@@ -8,9 +9,14 @@ interface AboutSectionProps {
 
 function AboutSection({ about }: AboutSectionProps) {
   const isSV = useIsSV();
+  const { ref, inView } = useInView();
 
   return (
-    <section id="about" className={`section about-section${isSV ? ' is-sv' : ''}`}>
+    <section
+      ref={ref}
+      id="about"
+      className={`section about-section${isSV ? ' is-sv' : ''}${inView ? ' in-view' : ''}`}
+    >
       <div className="section-content">
         <h1 className="title">{about.title}</h1>
         <CloudImage

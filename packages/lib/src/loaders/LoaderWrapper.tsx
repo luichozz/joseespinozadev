@@ -9,9 +9,10 @@ export interface LoaderData {
 
 interface LoaderWrapperProps {
   children: (data: LoaderData) => ReactNode;
+  fallback?: ReactNode;
 }
 
-function LoaderWrapper({ children }: LoaderWrapperProps) {
+function LoaderWrapper({ children, fallback = null }: LoaderWrapperProps) {
   const [data, setData] = useState<LoaderData | null>(null);
 
   useEffect(() => {
@@ -22,7 +23,7 @@ function LoaderWrapper({ children }: LoaderWrapperProps) {
       .catch((err) => console.error('[LoaderWrapper] Sanity fetch failed:', err));
   }, []);
 
-  if (!data) return null;
+  if (!data) return <>{fallback}</>;
 
   return <>{children(data)}</>;
 }

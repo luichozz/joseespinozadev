@@ -1,10 +1,10 @@
 import './App.css';
 import { LoaderWrapper } from '@portfolio/lib';
-import { NavBar, IconBar, AboutSection, ExperienceSection, ProjectsSection } from '@portfolio/web-ui';
+import { NavBar, IconBar, AboutSection, ExperienceSection, ProjectsSection, PageSkeleton } from '@portfolio/web-ui';
 
 function App() {
   return (
-    <LoaderWrapper>
+    <LoaderWrapper fallback={<PageSkeleton />}>
       {({ about, experiences }) => (
         <div className="app-container">
           <NavBar />

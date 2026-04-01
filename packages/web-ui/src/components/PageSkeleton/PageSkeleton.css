@@ -1,0 +1,109 @@
+@keyframes shimmer {
+  0%   { background-position: -800px 0; }
+  100% { background-position:  800px 0; }
+}
+
+.skeleton-block {
+  background: linear-gradient(
+    90deg,
+    rgba(138, 157, 177, 0.10) 0%,
+    rgba(138, 157, 177, 0.28) 40%,
+    rgba(138, 157, 177, 0.10) 80%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+/* Page wrapper */
+.page-skeleton {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+/* NavBar skeleton */
+.skeleton-nav {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1200px;
+  height: 70px;
+  border-radius: 50px;
+  z-index: 999;
+}
+
+/* Section */
+.skeleton-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 4rem 4rem;
+}
+
+.skeleton-content {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Title */
+.skeleton-title {
+  width: 38%;
+  height: 4.5rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+}
+
+/* Circular avatar */
+.skeleton-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 2.5rem;
+  flex-shrink: 0;
+}
+
+/* Text lines */
+.skeleton-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.skeleton-line {
+  height: 1rem;
+  border-radius: 6px;
+}
+
+.skeleton-line:nth-child(1) { width: 100%; animation-delay: 0.05s; }
+.skeleton-line:nth-child(2) { width: 92%;  animation-delay: 0.10s; }
+.skeleton-line:nth-child(3) { width: 97%;  animation-delay: 0.15s; }
+.skeleton-line:nth-child(4) { width: 85%;  animation-delay: 0.20s; }
+.skeleton-line:nth-child(5) { width: 60%;  animation-delay: 0.25s; }
+
+/* Mobile */
+@media (max-width: 767px) {
+  .skeleton-section {
+    padding: 5rem 1.5rem 2rem;
+  }
+
+  .skeleton-title {
+    width: 55%;
+    height: 3rem;
+    align-self: center;
+  }
+
+  .skeleton-avatar {
+    width: 150px;
+    height: 150px;
+    align-self: center;
+  }
+}

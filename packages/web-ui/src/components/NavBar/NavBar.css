@@ -49,3 +49,12 @@
 .pixel-animal.left {
     left: 20px;
 }
+
+/* Small Viewport (isSV) */
+.navBar.is-sv {
+    padding: 0 16px;
+}
+
+.navBar.is-sv .MuiButton-root {
+    padding: 6px 12px;
+}

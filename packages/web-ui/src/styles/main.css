@@ -186,34 +186,31 @@
   }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .section {
-    padding: 5rem 2rem 2rem 2rem;
-  }
+/* Small Viewport (isSV) */
+.section.is-sv {
+  padding: 5rem 1.5rem 2rem 1.5rem;
+}
 
-  .title {
-    font-size: 3rem;
-  }
+.about-section.is-sv .section-content {
+  text-align: center;
+}
 
-  .section-title {
-    font-size: 2.5rem;
-  }
+.is-sv .title {
+  font-size: 3rem;
+}
 
-  .profile-image {
-    width: 200px !important;
-    height: 200px !important;
-  }
+.is-sv .section-title {
+  font-size: 2.5rem;
+}
 
-  .experience-grid {
-    grid-template-columns: 1fr;
-  }
+.is-sv .experience-grid {
+  grid-template-columns: 1fr;
+}
 
-  .intro-text {
-    font-size: 1rem;
-  }
+.is-sv .intro-text {
+  font-size: 1rem;
+}
 
-  .job-title {
-    font-size: 1.3rem;
-  }
+.is-sv .job-title {
+  font-size: 1.3rem;
 }

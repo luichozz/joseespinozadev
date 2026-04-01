@@ -2,8 +2,11 @@ import './NavBar.css';
 import { Button } from '@mui/material';
 import Lottie from 'lottie-react';
 import pixelCat from '../../assets/cat.json';
+import { useIsSV } from '../../hooks/useIsSV';
 
 function NavBar() {
+  const isSV = useIsSV();
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -12,10 +15,12 @@ function NavBar() {
   };
 
   return (
-    <nav className="navBar">
-      <div className="pixel-animal left">
-        <Lottie animationData={pixelCat} loop={true} />
-      </div>
+    <nav className={`navBar${isSV ? ' is-sv' : ''}`}>
+      {!isSV && (
+        <div className="pixel-animal left">
+          <Lottie animationData={pixelCat} loop={true} />
+        </div>
+      )}
 
       <div className="nav-links">
         <Button color="inherit" onClick={() => scrollToSection('about')}>

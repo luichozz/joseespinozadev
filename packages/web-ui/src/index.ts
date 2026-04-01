@@ -8,5 +8,6 @@ export { default as AboutSection } from './components/AboutSection/AboutSection'
 export { default as ExperienceSection } from './components/ExperienceSection/ExperienceSection';
 export { default as ProjectsSection } from './components/ProjectsSection/ProjectsSection';
 export { backGround, primary, secondary, accent } from './theme/colors';
+export { default as PageSkeleton } from './components/PageSkeleton/PageSkeleton';
 export { useIsSV } from './hooks/useIsSV';
 export { useInView } from './hooks/useInView';

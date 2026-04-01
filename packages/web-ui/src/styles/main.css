@@ -13,8 +13,6 @@
 .section-content {
   max-width: 1200px;
   width: 100%;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 /* About Section */
@@ -33,7 +31,6 @@
   margin-bottom: 2rem;
   color: var(--accent);
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .profile-image {
@@ -45,7 +42,6 @@
   margin-bottom: 2rem;
   object-fit: cover;
   opacity: 0;
-  animation: fadeInScale 1s ease-out 0.4s forwards;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -63,7 +59,6 @@
   color: var(--accent);
   white-space: pre-line;
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 0.7s forwards;
   margin-bottom: 2rem;
 }
 
@@ -79,6 +74,7 @@
   margin-bottom: 3rem;
   color: var(--background);
   text-align: center;
+  opacity: 0;
 }
 
 .experience-grid {
@@ -95,12 +91,7 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
 }
-
-.experience-card:nth-child(1) { animation-delay: 0.1s; }
-.experience-card:nth-child(2) { animation-delay: 0.2s; }
-.experience-card:nth-child(3) { animation-delay: 0.3s; }
 
 .experience-card:hover {
   transform: translateY(-8px);
@@ -185,6 +176,31 @@
     transform: translateY(0) scale(1);
   }
 }
+
+/* Scroll-triggered animations — fire only when section enters the viewport */
+.section.in-view .title {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.section.in-view .section-title {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.section.in-view .profile-image {
+  animation: fadeInScale 1s ease-out 0.3s forwards;
+}
+
+.section.in-view .intro-text {
+  animation: fadeInUp 0.8s ease-out 0.5s forwards;
+}
+
+.section.in-view .experience-card {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.section.in-view .experience-card:nth-child(1) { animation-delay: 0.1s; }
+.section.in-view .experience-card:nth-child(2) { animation-delay: 0.25s; }
+.section.in-view .experience-card:nth-child(3) { animation-delay: 0.4s; }
 
 /* Small Viewport (isSV) */
 .section.is-sv {

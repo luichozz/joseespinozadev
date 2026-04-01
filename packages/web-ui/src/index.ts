@@ -9,3 +9,4 @@ export { default as ExperienceSection } from './components/ExperienceSection/Exp
 export { default as ProjectsSection } from './components/ProjectsSection/ProjectsSection';
 export { backGround, primary, secondary, accent } from './theme/colors';
 export { useIsSV } from './hooks/useIsSV';
+export { useInView } from './hooks/useInView';

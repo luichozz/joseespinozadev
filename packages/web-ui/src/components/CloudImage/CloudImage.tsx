@@ -8,21 +8,25 @@ interface CloudImageProps {
   className?: string;
 }
 
-function CloudImage({ publicId, alt, width, height, className }: CloudImageProps) {
-  let imageUrl = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/`;
+function buildUrl(publicId: string, width?: number, height?: number) {
+  // Request at 3x the display size to cover high-DPI screens (retina, OLED, etc.)
+  // q_auto:best = highest quality, f_auto = WebP/AVIF for supporting browsers
+  const dpr = 3;
+  let transforms = 'q_auto:best,f_auto';
 
   if (width && height) {
-    imageUrl += `w_${width},h_${height},c_fill/`;
+    transforms += `,w_${width * dpr},h_${height * dpr},c_fill,g_face`;
   }
 
-  imageUrl += publicId;
+  return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${transforms}/${publicId}`;
+}
 
+function CloudImage({ publicId, alt, width, height, className }: CloudImageProps) {
   return (
     <img
-      src={imageUrl}
+      src={buildUrl(publicId, width, height)}
       alt={alt}
       className={className}
-      loading="lazy"
       style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}
     />
   );

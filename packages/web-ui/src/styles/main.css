@@ -85,29 +85,37 @@
 }
 
 .experience-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   padding: 2rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   opacity: 0;
 }
 
 .experience-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .card-header {
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   padding-bottom: 1rem;
 }
 
 .job-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--background);
   margin-bottom: 0.5rem;
 }
 
@@ -115,21 +123,21 @@
   display: block;
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--primary);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 0.25rem;
 }
 
 .period {
   display: block;
   font-size: 0.9rem;
-  color: var(--secondary);
+  color: rgba(255, 255, 255, 0.55);
   font-style: italic;
 }
 
 .job-description {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--accent);
+  color: rgba(255, 255, 255, 0.80);
   margin-bottom: 1.5rem;
 }
 
@@ -140,12 +148,14 @@
 }
 
 .tech-tag {
-  background-color: var(--primary);
-  color: var(--background);
-  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.90);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 0.35rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
+  backdrop-filter: blur(4px);
 }
 
 /* Projects Section */

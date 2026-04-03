@@ -164,6 +164,10 @@
   color: var(--accent);
 }
 
+.projects-section .section-title {
+  color: var(--accent);
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {

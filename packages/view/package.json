@@ -1,7 +1,7 @@
 {
   "name": "@portfolio/view",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@fontsource/inter": "^5.0.0",
     "@portfolio/lib": "*",
     "@portfolio/web-ui": "*",
     "react": "^19.2.0",

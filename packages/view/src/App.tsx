@@ -8,7 +8,7 @@ function App() {
       {({ about, experiences }) => (
         <div className="app-container">
           <NavBar />
-          <IconBar />
+          <IconBar linkedInUrl={about.linkedInUrl} email={about.email} />
           <AboutSection about={about} />
           <ExperienceSection experiences={experiences} />
           <ProjectsSection />

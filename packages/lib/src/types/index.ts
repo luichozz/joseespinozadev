@@ -10,4 +10,6 @@ export interface AboutData {
   title: string;
   intro: string;
   profileImageId: string;
+  linkedInUrl?: string;
+  email?: string;
 }

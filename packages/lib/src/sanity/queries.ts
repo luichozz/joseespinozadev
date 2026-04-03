@@ -3,7 +3,7 @@ import type { AboutData, Experience } from '../types';
 
 export async function fetchAbout(): Promise<AboutData | null> {
   return sanityClient.fetch<AboutData | null>(
-    `*[_type == "about"][0] { title, intro, profileImageId }`
+    `*[_type == "about"][0] { title, intro, profileImageId, linkedInUrl, email }`
   );
 }
 

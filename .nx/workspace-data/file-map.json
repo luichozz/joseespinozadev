@@ -11,7 +11,167 @@
   },
   "nxJsonPlugins": [],
   "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "vite.config.ts",
+        "hash": "16225914092815047172"
+      },
+      {
+        "file": ".gitattributes",
+        "hash": "9504533597533733844"
+      },
+      {
+        "file": "package.json",
+        "hash": "8763780317574040985"
+      },
+      {
+        "file": "src/assets/react.svg",
+        "hash": "16069471864800376455"
+      },
+      {
+        "file": "src/cloudImage/cloudImage.tsx",
+        "hash": "1699637467659234475"
+      },
+      {
+        "file": "src/navBar/navBar.tsx",
+        "hash": "13694589492908408073"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "2365188958523842680"
+      },
+      {
+        "file": "scripts/bump-versions.js",
+        "hash": "453131611298036192"
+      },
+      {
+        "file": "nx.json",
+        "hash": "61358968668094370"
+      },
+      {
+        "file": "src/iconBar/iconBar.css",
+        "hash": "1534914248953626620"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "654672224969288638"
+      },
+      {
+        "file": "index.html",
+        "hash": "9119675285153559198"
+      },
+      {
+        "file": "eslint.config.js",
+        "hash": "16942999842498204"
+      },
+      {
+        "file": "README.md",
+        "hash": "7125922354841526016"
+      },
+      {
+        "file": "src/App.tsx",
+        "hash": "11056598664594026861"
+      },
+      {
+        "file": "scripts/check-versions.js",
+        "hash": "1085548857845457590"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "18080293354852750129"
+      },
+      {
+        "file": "src/navBar/navBar.css",
+        "hash": "16660075406249613060"
+      },
+      {
+        "file": "src/assets/colors.ts",
+        "hash": "12937191189572279139"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "5465718486149434459"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13069749010794082153"
+      },
+      {
+        "file": "src/iconBar/iconBar.tsx",
+        "hash": "14899315772392897160"
+      },
+      {
+        "file": ".env.example",
+        "hash": "3419792443667660472"
+      },
+      {
+        "file": "src/index.css",
+        "hash": "17920720670032183492"
+      },
+      {
+        "file": "src/App.css",
+        "hash": "2109604472622666548"
+      },
+      {
+        "file": "public/vite.svg",
+        "hash": "16046085400642193116"
+      },
+      {
+        "file": "src/assets/Cat.json",
+        "hash": "7263832023633445104"
+      },
+      {
+        "file": ".github/workflows/pr-healthcheck.yml",
+        "hash": "7855343954637086476"
+      },
+      {
+        "file": "src/main.tsx",
+        "hash": "10415326967931924470"
+      },
+      {
+        "file": ".github/workflows/version-bump.yml",
+        "hash": "13033822943136910542"
+      },
+      {
+        "file": "tsconfig.node.json",
+        "hash": "11862655124761714159"
+      }
+    ],
     "projectFileMap": {
+      "@portfolio/lib": [
+        {
+          "file": "packages/lib/package.json",
+          "hash": "15374942621800925355",
+          "deps": [
+            "npm:react",
+            "npm:@sanity/client"
+          ]
+        },
+        {
+          "file": "packages/lib/src/index.ts",
+          "hash": "10553510797713984832"
+        },
+        {
+          "file": "packages/lib/src/loaders/LoaderWrapper.tsx",
+          "hash": "11151757502733895446"
+        },
+        {
+          "file": "packages/lib/src/sanity/client.ts",
+          "hash": "3657482322775572466"
+        },
+        {
+          "file": "packages/lib/src/sanity/queries.ts",
+          "hash": "7260703645566804141"
+        },
+        {
+          "file": "packages/lib/src/types/index.ts",
+          "hash": "1410270441288454739"
+        },
+        {
+          "file": "packages/lib/tsconfig.json",
+          "hash": "5877645100946147993"
+        }
+      ],
       "@portfolio/view": [
         {
           "file": "packages/view/index.html",
@@ -19,10 +179,11 @@
         },
         {
           "file": "packages/view/package.json",
-          "hash": "15634807602573692483",
+          "hash": "10403719220734029172",
           "deps": [
             "npm:@vitejs/plugin-react",
             "npm:vite",
+            "npm:@fontsource/inter",
             "@portfolio/lib",
             "@portfolio/web-ui",
             "npm:react",
@@ -35,15 +196,15 @@
         },
         {
           "file": "packages/view/src/App.tsx",
-          "hash": "7497272825266899450"
+          "hash": "6575162398336625435"
         },
         {
           "file": "packages/view/src/index.css",
-          "hash": "16811973751333755232"
+          "hash": "18306218284317423367"
         },
         {
           "file": "packages/view/src/main.tsx",
-          "hash": "13192510320465765946"
+          "hash": "3762092993829163431"
         },
         {
           "file": "packages/view/tsconfig.app.json",
@@ -59,13 +220,13 @@
         },
         {
           "file": "packages/view/vite.config.ts",
-          "hash": "6643022946647070582"
+          "hash": "15684616230278452789"
         }
       ],
       "@portfolio/web-ui": [
         {
           "file": "packages/web-ui/package.json",
-          "hash": "1213905091795569194",
+          "hash": "15214801928094878665",
           "deps": [
             "npm:react",
             "npm:react-dom",
@@ -84,11 +245,11 @@
         },
         {
           "file": "packages/web-ui/src/components/AboutSection/AboutSection.tsx",
-          "hash": "7239342382048667357"
+          "hash": "12457246208765944218"
         },
         {
           "file": "packages/web-ui/src/components/CloudImage/CloudImage.tsx",
-          "hash": "8583009982213248474"
+          "hash": "9195120750534551832"
         },
         {
           "file": "packages/web-ui/src/components/ExperienceCard/ExperienceCard.tsx",
@@ -96,7 +257,7 @@
         },
         {
           "file": "packages/web-ui/src/components/ExperienceSection/ExperienceSection.tsx",
-          "hash": "15735308386771399710"
+          "hash": "10445586724674896836"
         },
         {
           "file": "packages/web-ui/src/components/IconBar/IconBar.css",
@@ -104,27 +265,47 @@
         },
         {
           "file": "packages/web-ui/src/components/IconBar/IconBar.tsx",
-          "hash": "9464863992107570070"
+          "hash": "11196396010308932291"
         },
         {
           "file": "packages/web-ui/src/components/NavBar/NavBar.css",
-          "hash": "12884991870735209008"
+          "hash": "13033828225647139933"
         },
         {
           "file": "packages/web-ui/src/components/NavBar/NavBar.tsx",
-          "hash": "16214663547318606556"
+          "hash": "12024543951132543721"
+        },
+        {
+          "file": "packages/web-ui/src/components/PageSkeleton/PageSkeleton.css",
+          "hash": "5730756271598263992"
+        },
+        {
+          "file": "packages/web-ui/src/components/PageSkeleton/PageSkeleton.tsx",
+          "hash": "7289367420788199042"
         },
         {
           "file": "packages/web-ui/src/components/ProjectsSection/ProjectsSection.tsx",
-          "hash": "7228399954676136025"
+          "hash": "2232703600641941678"
+        },
+        {
+          "file": "packages/web-ui/src/hooks/useActiveSection.ts",
+          "hash": "13315906748879568621"
+        },
+        {
+          "file": "packages/web-ui/src/hooks/useInView.ts",
+          "hash": "5691766238391332553"
+        },
+        {
+          "file": "packages/web-ui/src/hooks/useIsSV.ts",
+          "hash": "11400973796200091591"
         },
         {
           "file": "packages/web-ui/src/index.ts",
-          "hash": "2658623281789247548"
+          "hash": "734510616686449006"
         },
         {
           "file": "packages/web-ui/src/styles/main.css",
-          "hash": "10844257783755567639"
+          "hash": "2440435046006199596"
         },
         {
           "file": "packages/web-ui/src/theme/colors.ts",
@@ -135,149 +316,47 @@
           "hash": "5877645100946147993"
         }
       ],
-      "@portfolio/lib": [
+      "@portfolio/studio": [
         {
-          "file": "packages/lib/package.json",
-          "hash": "16006602904088209117",
+          "file": "packages/studio/.sanity/runtime/app.js",
+          "hash": "15459930883075726000"
+        },
+        {
+          "file": "packages/studio/.sanity/runtime/index.html",
+          "hash": "10681155028991424685"
+        },
+        {
+          "file": "packages/studio/package.json",
+          "hash": "15021293326880027293",
           "deps": [
-            "npm:react"
+            "npm:@sanity/vision",
+            "npm:react",
+            "npm:react-dom",
+            "npm:sanity",
+            "npm:styled-components"
           ]
         },
         {
-          "file": "packages/lib/src/data/about.ts",
-          "hash": "5356047045893172677"
+          "file": "packages/studio/sanity.cli.ts",
+          "hash": "3524026099183709041"
         },
         {
-          "file": "packages/lib/src/data/experience.ts",
-          "hash": "12639421123755362704"
+          "file": "packages/studio/sanity.config.ts",
+          "hash": "6339440697313716802"
         },
         {
-          "file": "packages/lib/src/data/projects.ts",
-          "hash": "17133452011575516401"
+          "file": "packages/studio/schemas/about.ts",
+          "hash": "5405535261471829735"
         },
         {
-          "file": "packages/lib/src/index.ts",
-          "hash": "5770305198557179686"
+          "file": "packages/studio/schemas/experience.ts",
+          "hash": "12404869121204063180"
         },
         {
-          "file": "packages/lib/src/loaders/LoaderWrapper.tsx",
-          "hash": "10043119614218812517"
-        },
-        {
-          "file": "packages/lib/src/types/index.ts",
-          "hash": "14954706442477604571"
-        },
-        {
-          "file": "packages/lib/tsconfig.json",
-          "hash": "5877645100946147993"
+          "file": "packages/studio/schemas/index.ts",
+          "hash": "16067347725454588568"
         }
       ]
-    },
-    "nonProjectFiles": [
-      {
-        "file": ".claude/settings.local.json",
-        "hash": "13278311098065938469"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "13046175384202504187"
-      },
-      {
-        "file": "README.md",
-        "hash": "6529887400882112953"
-      },
-      {
-        "file": "eslint.config.js",
-        "hash": "16942999842498204"
-      },
-      {
-        "file": "index.html",
-        "hash": "9119675285153559198"
-      },
-      {
-        "file": "nx.json",
-        "hash": "61358968668094370"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "9594180673177376880"
-      },
-      {
-        "file": "package.json",
-        "hash": "8763780317574040985"
-      },
-      {
-        "file": "public/vite.svg",
-        "hash": "16046085400642193116"
-      },
-      {
-        "file": "src/App.css",
-        "hash": "2109604472622666548"
-      },
-      {
-        "file": "src/App.tsx",
-        "hash": "11056598664594026861"
-      },
-      {
-        "file": "src/assets/Cat.json",
-        "hash": "7263832023633445104"
-      },
-      {
-        "file": "src/assets/colors.ts",
-        "hash": "12937191189572279139"
-      },
-      {
-        "file": "src/assets/react.svg",
-        "hash": "16069471864800376455"
-      },
-      {
-        "file": "src/cloudImage/cloudImage.tsx",
-        "hash": "1699637467659234475"
-      },
-      {
-        "file": "src/iconBar/iconBar.css",
-        "hash": "1534914248953626620"
-      },
-      {
-        "file": "src/iconBar/iconBar.tsx",
-        "hash": "14899315772392897160"
-      },
-      {
-        "file": "src/index.css",
-        "hash": "17920720670032183492"
-      },
-      {
-        "file": "src/main.tsx",
-        "hash": "10415326967931924470"
-      },
-      {
-        "file": "src/navBar/navBar.css",
-        "hash": "16660075406249613060"
-      },
-      {
-        "file": "src/navBar/navBar.tsx",
-        "hash": "13694589492908408073"
-      },
-      {
-        "file": "tsconfig.app.json",
-        "hash": "5465718486149434459"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "654672224969288638"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "2365188958523842680"
-      },
-      {
-        "file": "tsconfig.node.json",
-        "hash": "11862655124761714159"
-      },
-      {
-        "file": "vite.config.ts",
-        "hash": "16225914092815047172"
-      }
-    ]
+    }
   }
 }

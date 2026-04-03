@@ -85,6 +85,164 @@
       "nx/target-defaults"
     ]
   },
+  "packages/studio": {
+    "root": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "name": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.executor": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.options": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.options.script": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata.scriptContent": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata.runCommand": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.executor": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.script": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.scriptContent": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.runCommand": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy.executor": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy.options": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy.metadata": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy.options.script": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy.metadata.scriptContent": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.deploy.metadata.runCommand": [
+      "packages/studio/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.dev.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
   "packages/view": {
     "root": [
       "packages/view/package.json",

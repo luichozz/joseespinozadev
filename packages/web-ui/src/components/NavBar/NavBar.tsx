@@ -3,9 +3,17 @@ import { Button } from '@mui/material';
 import Lottie from 'lottie-react';
 import pixelCat from '../../assets/cat.json';
 import { useIsSV } from '../../hooks/useIsSV';
+import { useActiveSection } from '../../hooks/useActiveSection';
+
+const NAV_ITEMS = [
+  { id: 'about',      label: 'About'      },
+  { id: 'experience', label: 'Experience' },
+  { id: 'projects',   label: 'Projects'   },
+] as const;
 
 function NavBar() {
   const isSV = useIsSV();
+  const active = useActiveSection();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -23,15 +31,16 @@ function NavBar() {
       )}
 
       <div className="nav-links">
-        <Button color="inherit" onClick={() => scrollToSection('about')}>
-          About
-        </Button>
-        <Button color="inherit" onClick={() => scrollToSection('experience')}>
-          Experience
-        </Button>
-        <Button color="inherit" onClick={() => scrollToSection('projects')}>
-          Projects
-        </Button>
+        {NAV_ITEMS.map(({ id, label }) => (
+          <Button
+            key={id}
+            color="inherit"
+            className={active === id ? 'nav-active' : ''}
+            onClick={() => scrollToSection(id)}
+          >
+            {label}
+          </Button>
+        ))}
       </div>
     </nav>
   );
